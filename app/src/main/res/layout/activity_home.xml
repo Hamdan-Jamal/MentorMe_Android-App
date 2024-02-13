@@ -16,7 +16,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true"
+        android:layout_above="@id/bottomNavigationView"
         app:cardBackgroundColor="@color/bg"
         app:cardCornerRadius="45dp">
 
@@ -58,5 +58,14 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/home"
+        app:menu="@xml/bottom_navigation_menu" />
 
 </RelativeLayout>

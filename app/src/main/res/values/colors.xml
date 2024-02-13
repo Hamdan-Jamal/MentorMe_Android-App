@@ -8,4 +8,6 @@
     <color name="card">#FFBEBE</color>
     <color name="bg">#DEF8F8</color>
     <color name="txtbg">#157177</color>
+    <color name="home">#157177</color>
+
 </resources>
