@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">I210724</string>
+    <string name="signup"><u>SignUp!</u></string>
+    <string name="login"><u>Login!</u></string>
+
 </resources>
+
+
+

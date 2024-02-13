@@ -7,4 +7,10 @@
     tools:context=".SplashActivityx"
     android:background="@drawable/mentorme">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_primary"
+        android:alpha="0.19"/>
+
 </RelativeLayout>
