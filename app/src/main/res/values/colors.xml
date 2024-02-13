@@ -6,5 +6,6 @@
     <color name="my_primary">#00A0E8</color>
     <color name="my_secondary">#070E0F</color>
     <color name="card">#FFBEBE</color>
-    <color name="bg">#77C2CC</color>
+    <color name="bg">#DEF8F8</color>
+    <color name="txtbg">#157177</color>
 </resources>

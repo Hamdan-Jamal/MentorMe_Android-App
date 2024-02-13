@@ -48,8 +48,6 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_round"
-
                 android:drawableEnd="@drawable/done_icon"
                 android:inputType="textEmailAddress"/>
 
