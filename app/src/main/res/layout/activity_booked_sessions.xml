@@ -4,53 +4,151 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JohnCooper">
+    tools:context=".SearchResultsActivity">
 
-    <RelativeLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/my_primary"
-        android:alpha="0.17"/>
+        android:background="@color/bg">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        app:cardBackgroundColor="@color/bg"
-        app:cardCornerRadius="45dp">
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="28dp"
+            android:text="Booked Sessions"
+            android:textColor="@color/txtbg"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="28dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="300dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <View
+
+            <TextView
+                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp" />
+                android:layout_height="31dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:text="Emma Phillips"
+                android:textColor="@color/txtbg"
+                android:textSize="21sp" />
 
-            <ImageButton
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/backicon" />
+                android:layout_gravity="left"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="27dp"
+                android:text="Android Developer"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="78dp"
+                android:layout_height="33dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:text="1st Jan 2024 \n9:00 pm"
+                android:textColor="#ecb904"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="135dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="272dp"
+            android:background="@mipmap/girl"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="156dp"
+            android:onClick="toJohn"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Booked Sessions"
+                android:layout_height="31dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:text="John Cooper"
                 android:textColor="@color/txtbg"
-                android:textSize="28sp"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="120dp"
+                android:layout_height="17dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="27dp"
+                android:text="UX Designer @ Google"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="78dp"
+                android:layout_height="33dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:text="24th Dec 2023 \n1:00 pm"
+                android:textColor="#ecb904"
+                android:textSize="11sp"
                 android:textStyle="bold" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray" />
 
+        </androidx.cardview.widget.CardView>
 
+        <ImageView
+            android:layout_width="135dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="114dp"
+            android:background="@mipmap/john2"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
+        </ImageView>
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/back"
+            android:onClick="toMyProfile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>

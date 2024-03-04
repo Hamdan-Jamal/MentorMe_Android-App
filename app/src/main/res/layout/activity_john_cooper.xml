@@ -1,56 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg"
     tools:context=".JohnCooper">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/my_primary"
-        android:alpha="0.17"/>
+        android:layout_height="406dp"
+        android:layout_marginBottom="325dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/profile_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        app:cardBackgroundColor="@color/bg"
-        app:cardCornerRadius="45dp">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="381dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="340dp"
+            android:text="I am a passionate UX designer at Google with a focus on \ncreating user-centric and intuitive interfaces. With 10 years of experience."
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
+        <View
+            android:id="@+id/view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="28dp">
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="300dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="60dp" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:onClick="toProfile"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/backicon" />
+        </ImageView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Hi, I'm John Cooper"
-                android:textColor="@color/txtbg"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="161dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/john" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="168dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="192dp"
+            android:layout_marginEnd="84dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/star" />
+
+        <TextView
+            android:layout_width="194dp"
+            android:layout_height="105dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="64dp"
+            android:text="Hi, I'm \n\nJohn Cooper "
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="194dp"
+            android:layout_height="105dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="188dp"
+            android:text="UX Designer at \n\nGoogle "
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="324dp"
+            android:layout_marginTop="192dp"
+            android:text="4.8"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="74dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="312dp"
+            android:text="About me"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="440dp"
+        android:text="My Expertise include"
+        android:textColor="@color/txtbg"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="270dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rectangleshape"
+        android:text="Book a Session"
+        android:onClick="toBookSessions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="400dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="52dp"
+        android:onClick="toDropReview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/johncooper" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

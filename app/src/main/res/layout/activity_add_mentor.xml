@@ -4,68 +4,232 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
-    tools:context=".HomeActivity">
+    tools:context=".SearchResultsActivity">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/my_primary"
-        android:alpha="0.17"/>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottomNavigationView"
-        app:cardBackgroundColor="@color/bg"
-        app:cardCornerRadius="45dp">
+        android:background="@color/bg" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="28dp">
+            android:layout_height="651dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="24dp" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:onClick="toSearch"
+                android:src="@drawable/back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textViewWelcomeMessage"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="24sp"
+                android:layout_height="31dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="13dp"
+                android:text="Add New Mentor"
                 android:textColor="@color/txtbg"
-                android:textStyle="bold"
-                android:layout_marginTop="50dp"
-                android:layout_centerHorizontal="true"
-                android:text="Add New Mentor" />
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textViewMentorCategory"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:layout_height="31dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="97dp"
+                android:layout_marginTop="7dp"
+                android:text="Help us expand!"
                 android:textColor="@color/txtbg"
-                android:textStyle="bold"
-                android:layout_below="@id/textViewWelcomeMessage"
-                android:layout_marginTop="20dp"
-                android:layout_centerHorizontal="true"
-                android:text="Help us expand!:" />
+                android:textSize="17sp" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewMentors"
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textViewMentorCategory"
-                android:layout_marginTop="20dp"/>
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/add_mentor_background">
+
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginBottom="216dp"
+                    android:text="Description"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:layout_width="358dp"
+                    android:layout_height="113dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@mipmap/video_photo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginTop="164dp"
+                    android:text="Name"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:layout_width="315dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="188dp"
+                    android:layout_marginEnd="70dp"
+                    android:background="@mipmap/edittxtrect"
+                    android:hint="   Enter Name"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </EditText>
+
+                <EditText
+                    android:layout_width="315dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="253dp"
+                    android:layout_marginEnd="70dp"
+                    android:background="@mipmap/edittxtrect"
+                    android:hint="   Enter Description"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </EditText>
+
+                <EditText
+                    android:layout_width="315dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="321dp"
+                    android:layout_marginEnd="70dp"
+                    android:background="@mipmap/edittxtrect"
+                    android:hint="   Available"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </EditText>
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginBottom="148dp"
+                    android:text="Status"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="336dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="382dp"
+                    android:layout_marginEnd="70dp"
+                    android:onClick="toProfile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/btn" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="172dp"
+                    android:layout_marginTop="392dp"
+                    android:text="Upload"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </RelativeLayout>
 
+    <ImageView
+        android:id="@+id/button"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="630dp"
+        android:onClick="toSearch"
+        android:layout_marginStart="95dp"
+        android:text="Button" />
+
+    <ImageView
+        android:id="@+id/button2"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="630dp"
+        android:onClick="toMyProfile"
+        android:layout_marginStart="345dp"
+        android:text="Button" />
+
+    <ImageView
+        android:id="@+id/Button3"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="630dp"
+        android:onClick="toChat"
+        android:layout_marginStart="265dp"
+        android:text="Button" />
+
+    <ImageView
+        android:id="@+id/Button4"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="630dp"
+        android:onClick="toProfile"
+        android:layout_marginStart="15dp"
+        android:text="Button" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
         android:layout_alignParentBottom="true"
         android:background="@color/home"
         app:menu="@xml/bottom_navigation_menu" />
-
 </RelativeLayout>

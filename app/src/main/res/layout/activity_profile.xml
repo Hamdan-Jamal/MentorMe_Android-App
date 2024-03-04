@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LetsFindActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="30dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="56dp"
+                android:text="Hello, Ali"
+                android:textColor="@color/txtbg"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="90dp"
+                android:alpha="0.8"
+                android:text="Ready for mentorship? Let's begin the journey!"
+                android:textColor="@color/txtbg"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/imageView20"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="66dp"
+                android:layout_marginEnd="39dp"
+                android:onClick="toNotification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/bell" />
+
+            <ImageView
+                android:id="@+id/imageView21"
+                android:layout_width="match_parent"
+                android:layout_height="127dp"
+                android:layout_marginTop="128dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/c1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="530dp"
+            android:layout_height="176dp"
+            android:layout_marginTop="260dp"
+            app:srcCompat="@mipmap/c2" />
+
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="530dp"
+            android:layout_height="176dp"
+            android:layout_marginTop="470dp"
+            app:srcCompat="@mipmap/c2" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="443dp"
+            android:layout_marginStart="14dp"
+            android:textStyle="bold"
+            android:textColor="@color/txtbg"
+            android:textSize="16sp"
+            android:text="Education Mentors" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="443dp"
+            android:layout_marginStart="365dp"
+            android:textColor="@color/txtbg"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:text="View All" />
+
+
+
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
+        android:layout_alignParentBottom="true"
+        android:background="@color/home"
+        app:menu="@xml/bottom_navigation_menu" />
+
+    <ImageView
+        android:id="@+id/button"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="630dp"
+        android:onClick="toSearch"
+        android:layout_marginStart="95dp"
+        android:text="Button" />
+
+    <ImageView
+        android:id="@+id/button1"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="630dp"
+        android:onClick="toAdd"
+        android:layout_marginStart="180dp"
+        android:text="Button" />
+
+    <ImageView
+        android:id="@+id/button2"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="630dp"
+        android:onClick="toMyProfile"
+        android:layout_marginStart="345dp"
+        android:text="Button" />
+
+    <ImageView
+        android:id="@+id/Button3"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="630dp"
+        android:onClick="toChat"
+        android:layout_marginStart="265dp"
+        android:text="Button" />
+
+    <ImageView
+        android:id="@+id/Button4"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="630dp"
+        android:onClick="toProfile"
+        android:layout_marginStart="15dp"
+        android:text="Button" />
+
+</RelativeLayout>

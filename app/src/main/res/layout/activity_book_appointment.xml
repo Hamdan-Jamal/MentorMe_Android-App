@@ -1,56 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg"
     tools:context=".JohnCooper">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/my_primary"
-        android:alpha="0.17"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="410dp"
+        android:layout_height="228dp"
+        android:background="@drawable/profile_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        app:cardBackgroundColor="@color/bg"
-        app:cardCornerRadius="45dp">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="105dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="188dp"
+            android:text="$1500/Session"
+            android:textColor="#ffc90a"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/back_arrow"
+            android:onClick="toJohn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="161dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/john" />
+
+        <View
             android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="168dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="149dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="80dp"
+            android:text="John Cooper "
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="256dp"
+            android:layout_marginTop="184dp"
+            android:src="@mipmap/call"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="19dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="130dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/star" />
+
+        <TextView
+            android:id="@+id/textView28"
+            style="bold"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="28dp">
+            android:layout_marginStart="79dp"
+            android:layout_marginTop="130dp"
+            android:text="4.8"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="60dp" />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/backicon" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Book your session"
-                android:textColor="@color/txtbg"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray" />
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="26dp"
+            android:text="Book your session"
+            android:textColor="@color/txtbg"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="270dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rectangle2"
+        android:text="Book an appointment"
+        android:onClick="toBookedSessions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="253dp"
+        android:text="Dec"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="254dp"
+        android:text="2023"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="314dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="287dp"
+        android:text="M\t\t\t\t\tT\t\t\t\t\tW\t\t\t\t\tT\t\t\t\t\tF\t\t\t\t\tS\t\t\t\t\tS"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="294dp"
+        android:layout_height="246dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="299dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/calender" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="424dp"
+        android:layout_height="109dp"
+        android:layout_marginBottom="88dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/timeslots" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

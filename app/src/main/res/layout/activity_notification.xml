@@ -16,12 +16,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        app:cardBackgroundColor="@color/bg"
-        app:cardCornerRadius="45dp">
+        app:cardBackgroundColor="@color/bg">
 
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="550dp"
             android:orientation="vertical"
             android:padding="28dp">
@@ -29,16 +28,17 @@
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="60dp" />
+                android:layout_height="20dp" />
 
             <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/backicon" />
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:onClick="toMyProfile"
+                android:background="@drawable/back_arrow" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
                 android:gravity="center_vertical">
 
                 <TextView
@@ -233,6 +233,7 @@
                             android:layout_height="wrap_content"
                             android:text="Your fav list is expanding, Impressive!"
                             android:textColor="@android:color/black"
+                            android:textStyle="bold"
                             android:textSize="18sp" />
 
                         <ImageView

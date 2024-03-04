@@ -4,61 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".chats">
+    tools:context=".SearchResultsActivity">
 
-    <RelativeLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/my_primary"
-        android:alpha="0.17"/>
+        android:background="@color/bg">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        app:cardBackgroundColor="@color/bg"
-        app:cardCornerRadius="45dp">
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="76dp"
+            android:layout_height="41dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="21dp"
+            android:text="Chats"
+            android:textColor="@color/txtbg"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="28dp">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/back"
+            android:onClick="toProfile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="60dp" />
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="410dp"
+            android:layout_height="141dp"
+            android:layout_marginTop="73dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/community" />
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/backicon" />
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="424dp"
+            android:layout_height="420dp"
+            android:layout_marginTop="182dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/all_messages" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Let's Find..."
-                android:textColor="@color/txtbg"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="40dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/button"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="630dp"
+        android:onClick="toSearch"
+        android:layout_marginStart="95dp"
+        android:text="Button" />
 
+    <ImageView
+        android:id="@+id/button1"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="630dp"
+        android:onClick="toAdd"
+        android:layout_marginStart="180dp"
+        android:text="Button" />
 
+    <ImageView
+        android:id="@+id/button2"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="630dp"
+        android:onClick="toMyProfile"
+        android:layout_marginStart="345dp"
+        android:text="Button" />
 
-
-        </LinearLayout>
-
-
-
-    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:id="@+id/Button4"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="630dp"
+        android:onClick="toProfile"
+        android:layout_marginStart="15dp"
+        android:text="Button" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
         android:layout_alignParentBottom="true"
         android:background="@color/home"
         app:menu="@xml/bottom_navigation_menu" />

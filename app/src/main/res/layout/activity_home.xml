@@ -17,8 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bottomNavigationView"
-        app:cardBackgroundColor="@color/bg"
-        app:cardCornerRadius="45dp">
+        app:cardBackgroundColor="@color/bg">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -66,6 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/home"
+        app:labelVisibilityMode="labeled"
         app:menu="@xml/bottom_navigation_menu" />
 
 </RelativeLayout>
