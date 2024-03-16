@@ -46,12 +46,15 @@
                 android:text="Email Address"
                 android:textStyle="bold"
                 android:alpha="0.7"/>
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="toReset"
                 android:drawableEnd="@drawable/done_icon"
-                android:inputType="textEmailAddress"/>
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:onClick="toReset"
+                tools:ignore="SpeakableTextPresentCheck" />
 
 
             <View
@@ -63,11 +66,15 @@
                 android:text="Password"
                 android:textStyle="bold"
                 android:alpha="0.7"/>
+
             <EditText
+                android:id="@+id/T1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/done_icon"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck" />
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -78,15 +85,17 @@
                     android:text="Remember me"
                     android:layout_centerVertical="true"
                     android:alpha="0.6"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Forgot Password"
-                    android:onClick="toReset"
+                    android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:textStyle="bold"
+                    android:minHeight="48dp"
+                    android:onClick="toReset"
+                    android:text="Forgot Password"
                     android:textColor="@color/txtbg"
-                    android:layout_alignParentEnd="true"/>
+                    android:textStyle="bold" />
             </RelativeLayout>
 
             <View
