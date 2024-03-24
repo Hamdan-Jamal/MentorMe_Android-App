@@ -68,20 +68,21 @@
             android:exported="false" />
         <activity
             android:name=".SignupActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SplashActivityx"
-            android:exported="true"
-            android:theme="@style/Theme.Design.NoActionBar">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivityx"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+
     </application>
 
 </manifest>

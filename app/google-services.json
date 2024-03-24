@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "385058613497",
+    "project_id": "mentorme-343c9",
+    "storage_bucket": "mentorme-343c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385058613497:android:13d52b2758bca288761a28",
+        "android_client_info": {
+          "package_name": "com.hamdan.i210724"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8p0Krjdl38qSoJw-AoOveiN_Frej9FOk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

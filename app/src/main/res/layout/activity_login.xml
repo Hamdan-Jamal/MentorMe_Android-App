@@ -47,6 +47,7 @@
                 android:textStyle="bold"
                 android:alpha="0.7"/>
             <EditText
+                android:id="@+id/editTextEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="toReset"
@@ -64,6 +65,7 @@
                 android:textStyle="bold"
                 android:alpha="0.7"/>
             <EditText
+                android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/done_icon"
@@ -90,6 +92,7 @@
             </RelativeLayout>
 
             <View
+                android:id="@+id/login"
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"/>
             <com.google.android.material.button.MaterialButton
